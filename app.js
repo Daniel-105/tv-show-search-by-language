@@ -1,5 +1,4 @@
 const userLanguageInput = document.querySelector("#inputLanguageId").value;
-const userTitleInput = document.querySelector("#inputTitleId").value;
 const form = document.querySelector("#searchForm");
 const imageContainer = document.querySelector("#imageContainer");
 
@@ -25,6 +24,4 @@ form.addEventListener("submit", async (e) => {
     let shows = response.data;
     makeTitles(shows);
   }
-
-  // for(let i = 0; i < )
 });
