@@ -1,6 +1,6 @@
-const userLanguageInput = document.querySelector("#inputLanguageId").value;
-const form = document.querySelector("#searchForm");
-const imageContainer = document.querySelector("#imageContainer");
+let userLanguageInput = document.querySelector("#inputLanguageId").value;
+let form = document.querySelector("#searchForm");
+let imageContainer = document.querySelector("#imageContainer");
 
 const makeTitles = (shows) => {
   for (let result of shows) {
@@ -16,7 +16,6 @@ const makeTitles = (shows) => {
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-
   for (let i = 0; i < 275; i++) {
     let response = await axios.get(`https://api.tvmaze.com/shows?page=${i}`);
     let shows = response.data;
